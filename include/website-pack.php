@@ -9,7 +9,7 @@
                         <p>Perfect for small businesses starting their online journey.</p>
                     </div>
                     <div class="pack-price">
-                        <h4 class="pack-amt"><sup>$</sup>199.00 <span class="old_price">$299 <sub>Only</sub></span></h4>
+                        <h4 class="pack-amt"><sup>$</sup>249.00 <span class="old_price">$349 <sub>Only</sub></span></h4>
                     </div>
                     <div class="pack-list pack-ul">
                         <ul>
