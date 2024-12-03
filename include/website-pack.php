@@ -237,7 +237,7 @@
             <div class="col-md-4 pack-item">
                 <div class="pack-inn">
                     <div class="pack-header">
-                        <h3 class="pack-name">BUSINESS WEBSITE<br>Package</h3>
+                        <h3 class="pack-name">BUSINESS WEBSITE <br>Package</h3>
                         <p>Perfect for businesses wanting advanced functionality.</p>
                     </div>
                     <div class="pack-price">
@@ -293,8 +293,8 @@
                     </div>
                     <div class="pack-btn">
                         <ul>
-                            <li><a href="javascript:;" onclick="get_packagess(this.name)" name="BUSINESS WEB Package - $949.00" data-fancybox=""
-                                    title="BUSINESS WEB Package - $949.00" data-src="#popupform"
+                            <li><a href="javascript:;" onclick="get_packagess(this.name)" name="BUSINESS WEBSITE Package - $949.00" data-fancybox=""
+                                    title="BUSINESS WEBSITE Package - $949.00" data-src="#popupform"
                                     class="order_now various">Start Project</a></li>
                             <li><a class="live_chat chat" href="javascript:;">Live Chat</a></li>
                         </ul>
