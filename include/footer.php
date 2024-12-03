@@ -203,8 +203,7 @@
         <div class="!mt-10 p-3">
             <h2 class="text-3xl font-bold !text-black">Get Custom Website Design</h2>
             <p class="!text-lg !text-[#FE6F19]">In Just <span class="text-black text-3xl font-semibold">$249</span></p>
-            <p class="mt-2 text-[14px] text-[#848484] !pr-2">Get Started with Customized Website Designs & Deliver Your
-                Brand Message Effectively</p>
+            <p class="mt-2 text-[14px] text-[#848484] !pr-2">Get started with tailored website designs to showcase your brand and engage your audience effectively</p>
             <ul class="list-disc list-inside mt-3 text-[14px] text-[#848484]">
                 <li class="text-[14px] text-[#848484] text-left leading-[0px]">✔ 100% Money Back Guarantee</li>
                 <li class="text-[14px] text-[#848484] text-left leading-[0px]">✔ 100% Satisfaction Guarantee</li>
@@ -262,7 +261,7 @@
                         <li>
                             <div class="relative">
                                 <input type="submit" value="Get Started Now">
-                                <img src="assets/images/arrowForward.png" alt="" class="absolute right-10 top-[18px]">
+                                <img src="assets/images/arrowForward.png" alt="" class="absolute right-8 top-[18px]">
                             </div>
                             <input class="" type="hidden" name="ctry" value="" />
                             <input type="hidden" name="pc" value="">

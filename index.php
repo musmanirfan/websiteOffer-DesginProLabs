@@ -89,7 +89,7 @@ include 'include/header.php';?>
             class="w-full text-black p-3 text-base focus:outline-none border rounded !border-[#C6C6C6] bg-[#F3F3F3]"></textarea>
         </div>
       </div>
-      <button id="portfolio" class="w-full py-3 text-xl font-medium bg-[#FE5F00] mt-3 rounded-lg text-white">Get Started Now</button>
+      <button class="w-full py-3 text-xl font-medium bg-[#FE5F00] mt-3 rounded-lg text-white">Get Started Now</button>
       <img src="asets/images/blackfriday-tag.jpg" alt="" class="left-0 -top-11 absolute !z-30">
     </form>
   </div>
@@ -98,7 +98,7 @@ include 'include/header.php';?>
     class="absolute top-0 left-0 z-10 w-full md:h-[109vh] h-full object-cover"></video>
 </section>
 
-<section class="sm:w-[85%] w-[90%] mx-auto my-20 2xl:w-[1500px]">
+<section id="portfolio" class="sm:w-[85%] w-[90%] mx-auto my-20 2xl:w-[1500px]">
   <h1 class="text-center text-[46px] font-bold">Our Portfolio</h1>
   <p class="text-xl mt-1 text-center">Browse our expertly crafted website designs, organized by categories to suit your business needs.</p>
   <ul class="flex flex-wrap gap-[10px] items-center justify-center my-4 nav nav-pills" id="portfolioTabs" role="tablist">
