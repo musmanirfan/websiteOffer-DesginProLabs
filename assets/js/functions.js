@@ -5,62 +5,57 @@ $(window).on("load", function () {
 });
 
 $(document).ready(function () {
-  console.log("start");
 
   // Custom Dots Functionality for #testslider
-  var dotsContainer = $('.arr-gap'); // Select the custom dots container
+  var dotsContainer = $(".arr-gap"); // Select the custom dots container
 
   // Bind the 'initialized.owl.carousel' event before initializing the carousel
-  $('#testslider').on('initialized.owl.carousel', function (event) {
-    console.log("Carousel Initialized");
+  $("#testslider").on("initialized.owl.carousel", function (event) {
     var totalSlides = event.item.count;
-    console.log("Total Slides: " + totalSlides);
 
     // Dynamically generate dots based on the number of original slides
     for (var i = 0; i < totalSlides; i++) {
       dotsContainer.append('<div class="image-size"></div>');
-      console.log("Dot generated: " + (i + 1));
     }
 
-    var dots = $('.arr-gap .image-size'); // Update the dots variable after generation
+    var dots = $(".arr-gap .image-size"); // Update the dots variable after generation
 
     // Function to update active dot
     function updateActiveDot(index) {
-      dots.removeClass('active-dot'); // Remove active class from all dots
-      dots.eq(index).addClass('active-dot'); // Add active class to the current dot
-      console.log("Active dot: " + (index + 1));
+      dots.removeClass("active-dot"); // Remove active class from all dots
+      dots.eq(index).addClass("active-dot"); // Add active class to the current dot
     }
 
     // Set the initial active dot
     updateActiveDot(0);
 
     // Listen for slide change events
-    $('#testslider').on('changed.owl.carousel', function (event) {
+    $("#testslider").on("changed.owl.carousel", function (event) {
       var currentIndex;
 
       // Check if the 'relative' method is available
-      if (typeof event.relatedTarget.relative === 'function') {
+      if (typeof event.relatedTarget.relative === "function") {
         currentIndex = event.relatedTarget.relative(event.item.index);
       } else {
         // Fallback method if 'relative' is not available
-        currentIndex = event.item.index - (event.relatedTarget.clones().length / 2);
-        currentIndex = (currentIndex % totalSlides + totalSlides) % totalSlides;
+        currentIndex =
+          event.item.index - event.relatedTarget.clones().length / 2;
+        currentIndex =
+          ((currentIndex % totalSlides) + totalSlides) % totalSlides;
       }
 
-      console.log("Current Slide Index: " + (currentIndex + 1));
       updateActiveDot(currentIndex);
     });
 
     // Make dots clickable to navigate to slides
     dots.click(function () {
       var index = $(this).index();
-      $('#testslider').trigger('to.owl.carousel', [index, 300, true]); // 300ms is the speed of the transition
-      console.log("Dot clicked: " + (index + 1));
+      $("#testslider").trigger("to.owl.carousel", [index, 300, true]); // 300ms is the speed of the transition
     });
   });
 
   // Initialize Owl Carousel for #testslider
-  $('#testslider').owlCarousel({
+  $("#testslider").owlCarousel({
     loop: true,
     margin: 0,
     dots: false, // Disable default dots
@@ -68,6 +63,7 @@ $(document).ready(function () {
     autoplay: true,
     autoplayTimeout: 5000,
     autoplayHoverPause: true,
+    touchDrag: true, // Enable touch drag for mobile devices
     responsive: {
       0: {
         items: 1,
@@ -76,9 +72,9 @@ $(document).ready(function () {
         items: 1,
       },
       1000: {
-        items: 1
-      }
-    }
+        items: 1,
+      },
+    },
   });
 });
 
