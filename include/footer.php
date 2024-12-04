@@ -56,7 +56,7 @@
 <div style="display: none;" class="popupform" id="popupform">
     <h2>We are here to help!</h2>
     <p>Providing you the perfect solution for your business needs. Let's work together and unlock doors to success.</p>
-    <form action="#" method="post" class="validate-popupform">
+    <form onSubmit="handlePopupPackage(event, 'PopupPackageForm')" class="validate-popupform">
         <div class="row">
             <div class="col-md-12">
                 <ul>
@@ -64,7 +64,6 @@
                         <i class="fa fa-user" aria-hidden="true"></i>
                         <input type="text" class="required placeholder1" required="" placeholder="Full Name *"
                             name="Name">
-                        <input type="hidden" name="form-name" value="Order Form Query">
                     </li>
                 </ul>
             </div>
@@ -92,14 +91,14 @@
                         <i class="fa fa-phone" aria-hidden="true"></i>
                         <select name="Interested" id="packages3">
                             <option>Select Package</option>
-                            <option value="STARTUP WEBSITE Package - $249.00">STARTUP WEBSITE Package - $249.00</option>
-                            <option value="PROFESSIONAL WEBSITE Package - $399.00">PROFESSIONAL WEBSITE Package - $399.00</option>
-                            <option value="Interactive WEBSITE Package - $599.00">Interactive WEBSITE Package - $599.00
+                            <option value="BASIC LOGO Package - $39.00">Basic Logo Package - $39.00</option>
+                            <option value="STARTUP LOGO Package - $65.00">Startup Logo Package - $65.00</option>
+                            <option value="PROFESSIONAL LOGO Package - $99.99">Professional Logo Package - $99.99
                             </option>
-                            <option value="E-commerce Website Package - $799.00">E-commerce Website  Package - $799.00</option>
-                            <option value="BUSINESS WEBSITE Package - $949.00">BUSINESS WEBSITE Package - $949.00</option>
-                            <option value="ELITE WEBSITE Package - $1299.00">ELITE WEBSITE Package - $1299.00</option>
+                            <option value="BUSINESS LOGO Package - $149.99">Business Logo Package - $149.99</option>
+                            <option value="LOGO & WEB Package Only $249.99">Logo & Web Package Only $249.99</option>
                         </select>
+
                         <input type="hidden" id="packages-val2" class="placeholder1" name="Interest" value="">
                     </li>
                 </ul>
@@ -117,15 +116,6 @@
                 <ul>
                     <li>
                         <input type="submit" value="Submit">
-                        <input class="" type="hidden" name="ctry" value="" />
-                        <input type="hidden" name="pc" value="">
-
-                        <input type="hidden" name="cip" value="">
-                        <input type="hidden" name="hiddencapcha" value="">
-                        <input type="hidden" id="location" name="locationURL" value="" />
-                        <script type="text/javascript">
-                            document.getElementById('location').value = window.location.href;
-                        </script>
                     </li>
                 </ul>
             </div>
@@ -140,9 +130,10 @@
             <img class="!h-full" src="assets/images/popup-image1.webp" alt="offer">
         </div>
         <div class="!mt-10 p-3">
-            <h2 class="text-3xl font-bold !text-black">Get Custom Website Design</h2>
-            <p class="!text-lg !text-[#FE6F19]">In Just <span class="text-black text-3xl font-semibold">$249</span></p>
-            <p class="mt-2 text-[14px] text-[#848484] !pr-2">Get started with tailored website designs to showcase your brand and engage your audience effectively</p>
+            <h2 class="text-3xl font-bold !text-black">Get Custom Logo Design</h2>
+            <p class="!text-lg !text-[#FE6F19]">In Just <span class="text-black text-3xl font-semibold">$35</span></p>
+            <p class="mt-2 text-[14px] text-[#848484] !pr-2">Get Started with Customized Logo Designs & Deliver Your
+                Brand Message Effectively</p>
             <ul class="list-disc list-inside mt-3 text-[14px] text-[#848484]">
                 <li class="text-[14px] text-[#848484] text-left leading-[0px]">✔ 100% Money Back Guarantee</li>
                 <li class="text-[14px] text-[#848484] text-left leading-[0px]">✔ 100% Satisfaction Guarantee</li>
@@ -156,15 +147,14 @@
                 <p class="font-bold text-[22px] text-[#FE6F19]">+1 (437) 294-9609</p>
             </div>
         </div>
-        <form action="#" method="post" class="validate-popupform !mt-10 !mr-2">
+        <form onSubmit="handlePopupRectForm(event, 'popupRectangularFormLogo')" class="!mt-10 !mr-2">
             <div class="row">
                 <div class="col-md-12">
                     <ul>
                         <li>
                             <i class="fa fa-user" aria-hidden="true"></i>
-                            <input type="text" class="required placeholder1" required="" placeholder="Full Name *"
-                                name="Name">
-                            <input type="hidden" name="form-name" value="Order Form Query">
+                            <input type="text" id="namePopup" class="required placeholder1" required=""
+                                placeholder="Full Name *" name="Name">
                         </li>
                     </ul>
                 </div>
@@ -172,7 +162,7 @@
                     <ul>
                         <li>
                             <i class="fa fa-envelope" aria-hidden="true"></i>
-                            <input type="email" class="required email placeholder1" required=""
+                            <input id="emailPopup" type="email" class="required email placeholder1" required=""
                                 placeholder="Email Address *" name="Email">
                         </li>
                     </ul>
@@ -181,8 +171,9 @@
                     <ul>
                         <li>
                             <i class="fa fa-phone" aria-hidden="true"></i>
-                            <input type="text" class="required number placeholder1" minlength="10" maxlength="15"
-                                required="" placeholder="Phone No. *" name="Number" onkeypress="validate(event)">
+                            <input id="phonePopup" type="text" class="required number placeholder1" minlength="10"
+                                maxlength="15" required="" placeholder="Phone No. *" name="Number"
+                                onkeypress="validate(event)">
                         </li>
                     </ul>
                 </div>
@@ -190,8 +181,8 @@
                     <ul>
                         <li>
                             <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
-                            <textarea name="Message" rows="1" class="required placeholder1" required=""
-                                placeholder="Message"></textarea>
+                            <textarea id="descriptionPopup" name="Message" rows="1" class="required placeholder1"
+                                required="" placeholder="Message"></textarea>
                         </li>
                     </ul>
                 </div>
@@ -200,17 +191,8 @@
                         <li>
                             <div class="relative">
                                 <input type="submit" value="Get Started Now">
-                                <img src="assets/images/arrowForward.png" alt="" class="absolute right-8 top-[18px]">
+                                <img src="assets/images/arrowForward.png" alt="" class="absolute right-11 top-[18px]">
                             </div>
-                            <input class="" type="hidden" name="ctry" value="" />
-                            <input type="hidden" name="pc" value="">
-
-                            <input type="hidden" name="cip" value="">
-                            <input type="hidden" name="hiddencapcha" value="">
-                            <input type="hidden" id="location" name="locationURL" value="" />
-                            <script type="text/javascript">
-                                document.getElementById('location').value = window.location.href;
-                            </script>
                         </li>
                     </ul>
                 </div>
