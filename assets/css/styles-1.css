@@ -24991,7 +24991,6 @@ footer .logo-div{
     color: black;
 }
 
-
 .heading-banner {
     position: absolute;
     top: 100px;
@@ -25002,7 +25001,6 @@ footer .logo-div{
     width: fit-content;
     min-width: 600px;
 }
-
 
 /* Corrected Overflow Property */
 .our-testimonial {
@@ -25072,4 +25070,3 @@ footer .logo-div{
         width: 370px !important;
     }
 }
-

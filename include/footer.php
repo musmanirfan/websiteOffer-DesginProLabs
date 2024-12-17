@@ -91,15 +91,12 @@
                         <i class="fa fa-phone" aria-hidden="true"></i>
                         <select name="Interested" id="packages3">
                             <option>Select Package</option>
-                            <option value="BASIC LOGO Package - $39.00">Basic Logo Package - $39.00</option>
-                            <option value="STARTUP LOGO Package - $65.00">Startup Logo Package - $65.00</option>
-                            <option value="PROFESSIONAL LOGO Package - $99.99">Professional Logo Package - $99.99
+                            <option value="HTML Webiste">HTML Webiste</option>
+                            <option value="CMS Website">CMS Website</option>
+                            <option value="E-Commerce Website">E-Commerce Website
                             </option>
-                            <option value="BUSINESS LOGO Package - $149.99">Business Logo Package - $149.99</option>
-                            <option value="LOGO & WEB Package Only $249.99">Logo & Web Package Only $249.99</option>
+                            <option value="Portal Website">Portal Website</option>
                         </select>
-
-                        <input type="hidden" id="packages-val2" class="placeholder1" name="Interest" value="">
                     </li>
                 </ul>
             </div>
@@ -123,17 +120,14 @@
     </form>
 </div>
 <div style="display: none;" class="popupform2 2xl:!w-[1200px]" id="popupform2">
-    <!-- <h2>We are not here to help!</h2>
-    <p>Providing you the perfect solution for your business needs. Let's work together and unlock doors to success.</p> -->
     <div class="!grid lg:!grid-cols-3 md:grid-cols-2 gap-5 grid-cols-1">
         <div class="!p-0 lg:inline hidden">
             <img class="!h-full" src="assets/images/popup-image1.webp" alt="offer">
         </div>
         <div class="!mt-10 p-3">
-            <h2 class="text-3xl font-bold !text-black">Get Custom Logo Design</h2>
-            <p class="!text-lg !text-[#FE6F19]">In Just <span class="text-black text-3xl font-semibold">$35</span></p>
-            <p class="mt-2 text-[14px] text-[#848484] !pr-2">Get Started with Customized Logo Designs & Deliver Your
-                Brand Message Effectively</p>
+            <h2 class="text-3xl font-bold !text-black">Get Custom Website Design</h2>
+            <p class="!text-lg !text-[#FE6F19]">In Just <span class="text-black text-3xl font-semibold">$699</span></p>
+            <p class="mt-2 text-[14px] text-[#848484] !pr-2">Get started with tailored website designs to showcase your brand and engage your audience effectively</p>
             <ul class="list-disc list-inside mt-3 text-[14px] text-[#848484]">
                 <li class="text-[14px] text-[#848484] text-left leading-[0px]">✔ 100% Money Back Guarantee</li>
                 <li class="text-[14px] text-[#848484] text-left leading-[0px]">✔ 100% Satisfaction Guarantee</li>
@@ -147,7 +141,7 @@
                 <p class="font-bold text-[22px] text-[#FE6F19]">+1 (437) 294-9609</p>
             </div>
         </div>
-        <form onSubmit="handlePopupRectForm(event, 'popupRectangularFormLogo')" class="!mt-10 !mr-2">
+        <form onSubmit="handlePopupRectForm(event, 'popupRectangularFormWebsite')" class="!mt-10 !mr-2">
             <div class="row">
                 <div class="col-md-12">
                     <ul>

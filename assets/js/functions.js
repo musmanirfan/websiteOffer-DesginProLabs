@@ -101,6 +101,11 @@ function get_package(a) {
   $("#packages-val2").val(b3);
 }
 
+function get_packagess(a) {
+  $("#packages3").val(a);
+}
+
+
 function get_packagess(val) {
   $(`#packages3`).val(val).change();
   // $(`#packages3 option[value="${val}"]`).prop('selected', true);
@@ -108,6 +113,7 @@ function get_packagess(val) {
 
   $(`#packages3 option:eq(${index})`).prop("selected", true);
 }
+
 
 function getURLParameter(name) {
   return (
@@ -123,50 +129,24 @@ var val = getURLParameter("pack");
 // $('#packages').val(val);
 
 if (val == "1") {
-  $("#packages").val("BASIC LOGO PACKAGE - £35.00");
+  $("#packages").val("STARTUP WEBSITE Package - £249.00");
 }
 if (val == "2") {
-  $("#packages").val("STARTUP LOGO PACKAGE - £65.00");
+  $("#packages").val("PROFESSIONAL WEBSITE Package - £399.00");
 }
 if (val == "3") {
-  $("#packages").val("PROFESSIONAL LOGO PACKAGE - £99.99");
+  $("#packages").val("Interactive WEBSITE Package - £599.00");
 }
 if (val == "4") {
-  $("#packages").val("BUSINESS LOGO PACKAGE - £149.99");
+  $("#packages").val("E-commerce Website Package - £799.00");
 }
 if (val == "5") {
-  $("#packages").val("LOGO & WEB PACKAGE - £249.99");
+  $("#packages").val("BUSINESS WEBSITE Package - £949.00");
 }
 if (val == "6") {
-  $("#packages").val("START UP WEBSITE PACKAGE - £299");
-}
-if (val == "7") {
-  $("#packages").val("PROFESSIONAL WEBSITE PACKAGE - £544");
+  $("#packages").val("ELITE WEBSITE Package - £1299.00");
 }
 
-if (val == "8") {
-  $("#packages").val("IDENTITY WEB PACKAGE - £924");
-}
-
-if (val == "9") {
-  $("#packages").val("ELITE WEB PACKAGE - £1,324");
-}
-
-if (val == "10") {
-  $("#packages").val("BUSINESS WEB PACKAGE - £1,824");
-}
-
-if (val == "11") {
-  $("#packages").val("BEGINNERS E-COMMERCE PACKAGE - £895");
-}
-
-if (val == "12") {
-  $("#packages").val("CORPORATE E-COMMERCE PACKAGE - £1,695");
-}
-
-if (val == "13") {
-  $("#packages").val("ELITE E-COMMERCE PACKAGE - £2,595");
-}
 
 $("#packages1").val($("#packages").val());
 
@@ -182,12 +162,12 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-$(".desk-menu").click(function () {
-  $(".menu-left").toggleClass("enable");
+$('.desk-menu').click(function () {
+  $('.menu-left').toggleClass('enable');
 });
 
-$(".menu-lclose , .menu-lover").click(function () {
-  $(".menu-left").removeClass("enable");
+$('.menu-lclose , .menu-lover').click(function () {
+  $('.menu-left').removeClass('enable');
 });
 
 const handleBannerForm = async (e, submitted_from) => {
@@ -255,6 +235,8 @@ const handlePopupRectForm = async (e, submitted_from) => {
       body: JSON.stringify(objToSend),
     });
     e.target.reset();
+    // Hide the popup
+    $.fancybox.close();
     alert("Form Submitted Successfully");
   } catch (error) {
     console.error("Error during API call:", error);
@@ -294,6 +276,8 @@ const handlePopupPackage = async (e, submitted_from) => {
       body: JSON.stringify(objToSend),
     });
     e.target.reset();
+    // Hide the popup
+    $.fancybox.close();
     alert("Form Submitted Successfully");
   } catch (error) {
     console.error("Error during API call:", error);
